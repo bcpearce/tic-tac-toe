@@ -1,18 +1,16 @@
 class Game
-  @board[3][3]
+  @board
   
+  def initialize
+    @board = [ [7, 8, 9], [4, 5, 6], [1, 2, 3] ]
+  end
+   
   def board
     @board
   end
   
-  
-  
-  def print_board
-    print line = "  #{board[6]} . #{board[7]} . #{board[8]}\n"
-    puts "#{"."*line.length}"
-  	 print line = "  #{board[3]} . #{board[4]} . #{board[5]}\n"
-  	 puts "#{"."*line.length}"
-  	 print line = "  #{board[0]} . #{board[1]} . #{board[2]}\n"
+  def print
+    @board.to_a.each { |row| puts "#{ row[0] } | #{ row[1] } | #{ row[2] }" }
   end
-
+    
 end

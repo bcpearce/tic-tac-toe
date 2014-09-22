@@ -1,4 +1,6 @@
-require 'game.rb'
+require_relative 'game.rb'
 
-game.new
+game = Game.new
+
+game.print
 
