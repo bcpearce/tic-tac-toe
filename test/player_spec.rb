@@ -12,4 +12,13 @@ describe "Player" do
   describe "symbol" do
     its("symbol") { should eq('X') }
   end
+
+  describe "making moves"  do
+
+    before { @move = @player.make_move(5) }
+
+    subject { @move }
+
+    it { should eq({ 'X' => 5 }) }
+  end
 end
