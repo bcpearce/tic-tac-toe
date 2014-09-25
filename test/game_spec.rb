@@ -11,10 +11,11 @@ describe "Game" do
   it { should respond_to("players") }
   it { should respond_to("add_player") }
   it { should respond_to("update_board") }
+  it { should respond_to("moves") }
 
   describe "players" do
     
-    describe "it should allow adding players to the game" do
+    describe "when adding players to the game" do
       before do 
         @game.add_player('X')
         @game.add_player('O')

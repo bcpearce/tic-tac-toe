@@ -8,6 +8,7 @@ class Game
     @board = Array.new(10)
     (1..9).each { |i| @board[i] = i }
     @players = []
+    @moves = []
   end
    
   def board
@@ -16,6 +17,10 @@ class Game
 
   def players
     @players
+  end
+
+  def moves
+    @moves
   end
   
   def display_board
