@@ -10,6 +10,10 @@ class Game
   def board
     @board
   end
+
+  def players
+    @players
+  end
   
   def display_board
     @board.to_a.each do |row| 
