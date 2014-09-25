@@ -25,16 +25,4 @@ describe "Game" do
       it { should have(2).items }
     end
   end
-
-  describe "it should allow updating" do
-    before do
-      move = { 'X' => 5 } 
-      @game.update_board(move)
-    end
-
-    its("board[2,2]") { should eq('X') }
-
-  end
-
-
 end

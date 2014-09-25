@@ -3,7 +3,10 @@ require_relative 'player.rb'
 class Game
   
   def initialize
-    @board = [ [7, 8, 9], [4, 5, 6], [1, 2, 3] ]
+    # board will be a 10-element array (index 0 will be ignored in board referencing)
+    # default contents is the index
+    @board = Array.new(10)
+    (1..9).each { |i| @board[i] = i }
     @players = []
   end
    
@@ -16,14 +19,20 @@ class Game
   end
   
   def display_board
-    @board.to_a.each do |row| 
-      puts " #{ row[0] } | #{ row[1] } | #{ row[2] }"
-      puts "---+---+---" unless @board.to_a.last == row
-    end
+    puts " #{ @board[7] } | #{ @board[8] } | #{ @board[9] }"
+    puts "---+---+---"
+    puts " #{ @board[4] } | #{ @board[5] } | #{ @board[6] }"
+    puts "---+---+---"
+    puts " #{ @board[1] } | #{ @board[2] } | #{ @board[3] }"
   end
 
   def add_player(symbol)
     @players << Player.new(symbol)
   end
+
+  def update_board(move)
+
+  end
+
     
 end
