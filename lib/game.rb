@@ -23,7 +23,7 @@ class Game
   end
 
   def add_player(symbol)
-    @player << Player.new(symbol)
+    @players << Player.new(symbol)
   end
     
 end
