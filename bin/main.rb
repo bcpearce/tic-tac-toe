@@ -1,6 +1,6 @@
-require_relative 'game.rb'
+require_relative '../lib/game.rb'
 
 game = Game.new
 
-game.print
+game.display_board
 
