@@ -19,6 +19,6 @@ describe "Player" do
 
     subject { @move }
 
-    it { should eq({ 'X' => 5 }) }
+    it { should eq(['X', 5]) }
   end
 end
