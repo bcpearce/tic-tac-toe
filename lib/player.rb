@@ -8,6 +8,6 @@ class Player
   end
 
   def make_move(position)
-    { @symbol => position }
+    return @symbol, position 
   end
 end
