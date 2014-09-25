@@ -13,7 +13,7 @@ class Game
    
   def board
     @board
-  end
+  end 
 
   def players
     @players
@@ -36,7 +36,7 @@ class Game
   end
 
   def update_board(move)
-
+    @board[move[1]] = move[0]
   end
 
     

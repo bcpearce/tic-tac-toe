@@ -13,7 +13,7 @@ describe "Players playing the game" do
 
     before do 
       move = @player1.make_move(5)
-      @game.update_board(move)
+      @game.update_board(move)  
     end
 
     subject { @game.board[5] }
