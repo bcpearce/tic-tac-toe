@@ -12,6 +12,7 @@ describe "Game" do
   it { should respond_to("add_player") }
   it { should respond_to("update_board") }
   it { should respond_to("moves") }
+  it { should respond_to("is_winner?") }
 
   describe "players" do
     
@@ -26,4 +27,5 @@ describe "Game" do
       it { should have(2).items }
     end
   end
+
 end
