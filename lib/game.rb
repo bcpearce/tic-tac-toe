@@ -50,6 +50,17 @@ class Game
     end
   end
 
+  def open_positions?
+    @board.each do |x| 
+      (1..9).each do |y| 
+        return true if x == y
+      end
+    end
+  end
+
+  def is_draw? 
+    self.open_positions? && @players.none? { |winner| is_winner?(winner) }
+  end
 
     
 end
