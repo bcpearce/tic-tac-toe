@@ -43,4 +43,11 @@ describe "Game" do
     end
   end
 
+  describe "updating the board" do
+
+    subject { @game.update_board("Hello World!") } 
+
+    it { should eq(nil) }
+  end
+
 end
