@@ -1,0 +1,1 @@
+This is a Ruby-based Object-Oriented Programming Sample project using the game Tic-Tac-Toe.  It is playable in the command line by running the command from the root director "$ ruby lib/main.rb".  It works for two human players sharing a keyboard.  
