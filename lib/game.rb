@@ -36,6 +36,7 @@ class Game
 
   def add_player(symbol)
     @players << Player.new(symbol)
+    return @players.last
   end
 
   def update_board(move)
