@@ -11,7 +11,6 @@ class Game
     (1..9).each { |i| @board[i] = i }
     @players = []
     @moves = []
-    @status = { :winner => 0  }
   end
    
   def board
