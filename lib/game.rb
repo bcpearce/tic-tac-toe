@@ -10,7 +10,6 @@ class Game
     @board = Array.new(10)
     (1..9).each { |i| @board[i] = i }
     @players = []
-    @moves = []
   end
    
   def board
@@ -40,7 +39,6 @@ class Game
 
   def update_board(move)
     if @board.include?(move[1])
-      @moves += 1
       @board[move[1]] = move[0]
     end
   end
