@@ -58,7 +58,7 @@ class Game
   end
 
   def is_draw? 
-    self.open_positions? && @players.none? { |winner| is_winner?(winner) }
+    (self.open_positions? != true) && @players.none? { |winner| is_winner?(winner) }
   end
 
     
