@@ -42,12 +42,36 @@ describe "Players playing the game" do
       end
     end
 
+    it "should have that player's symbol" do
+      @game.board[1] == @game.board[2] && @game.board[1] == @game.board[3] && @game.board[3] == @player1.symbol
+    end
+
     describe "that player wins" do
       subject { @game.is_winner?(@player1) }
 
       it { should eq(true) }
     end
   end
+
+  describe "when players create a draw" do
+
+    before do
+      # play to a draw
+      @game.update_board(@player1.make_move(1)) 
+      @game.update_board(@player2.make_move(3)) 
+      @game.update_board(@player1.make_move(2)) 
+      @game.update_board(@player2.make_move(6))  
+      @game.update_board(@player1.make_move(9)) 
+      @game.update_board(@player2.make_move(8))  
+      @game.update_board(@player1.make_move(4)) 
+      @game.update_board(@player2.make_move(7))  
+      @game.update_board(@player1.make_move(5))  
+    end
+
+    subject { @game.is_draw? }
+    it { should eq(true) }
+    
+  end  
 
 end
 

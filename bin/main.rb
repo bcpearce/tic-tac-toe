@@ -4,7 +4,9 @@ game = Game.new
 
 game.display_board
 
-game.add_player('X')
-game.add_player('O')
+player1 = game.add_player('X')
+player2 = game.add_player('O')
+
+puts "Player #{player1.symbol}, enter a position:"
 
 
